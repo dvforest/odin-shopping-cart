@@ -1,0 +1,22 @@
+.homeContainer {
+  width: 100vw;
+  position: relative;
+}
+
+.backgroundImg {
+  width: 100%;
+  height: calc(100vh - 75px);
+  object-fit: cover;
+  object-position: bottom;
+  display: block;
+}
+
+.booksImg {
+  position: absolute;
+  width: 450px;
+  aspect-ratio: 1;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  z-index: 2;
+}
