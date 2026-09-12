@@ -4,11 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logoSection {
-  display: flex;
-  gap: 16px;
+  position: relative;
 }
 
 .linkSection {
@@ -16,18 +12,17 @@
   gap: 60px;
 }
 
-.logoVector {
-  width: 70px;
-}
-
-.logoText {
-  font-size: 2rem;
-  font-weight: 400;
-  font-family: 'Instrument Serif', serif;
-}
-
 .navText {
   font-family: 'Geologica', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.cartIcon {
+  stroke: var(--navy);
+}
+
+.menuIcon {
+  stroke: var(--navy);
 }

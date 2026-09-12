@@ -1,45 +1,62 @@
-import { AdvancedImage } from '@cloudinary/react';
-import cld from '../../utils/cloudinary';
 import styles from './Nav.module.css';
 import { ShoppingCart } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { NavLink } from 'react-router';
+import ImmersalLogo from '../ImmersalLogo/ImmersalLogo';
+import { useState } from 'react';
+import NavModal from '../NavModal/NavModal';
 
 function Nav() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   return (
-    <div className={styles.navBar}>
-      <NavLink
-        to="/"
-        end
-        className={styles.logoSection}
-      >
-        <AdvancedImage
-          cldImg={cld.image('logo-immersal')}
-          className={styles.logoVector}
-        />
-        <div className={styles.logoText}>IMMERSAL</div>
-      </NavLink>
+    <>
+      <div className={styles.navBar}>
+        <ImmersalLogo textVisible />
 
-      <div className={styles.linkSection}>
-        <NavLink
-          to="/"
-          end
-          className={styles.navText}
-        >
-          Home
-        </NavLink>
+        <ul className={styles.linkSection}>
+          <li>
+            <NavLink
+              to="/"
+              end
+              className={styles.navText}
+            >
+              Home
+            </NavLink>
+          </li>
 
-        <NavLink
-          to="/shop"
-          className={styles.navText}
-        >
-          Shop
-        </NavLink>
+          <li>
+            <NavLink
+              to="/shop"
+              className={styles.navText}
+            >
+              Shop
+            </NavLink>
+          </li>
 
-        <div className="cartContainer">
-          <ShoppingCart size={30} />
-        </div>
+          <li>
+            <div className={styles.cartContainer}>
+              <ShoppingCart
+                className={styles.cartIcon}
+                size={25}
+              />
+            </div>
+          </li>
+
+          <li>
+            <button
+              className={styles.menuIcon}
+              onClick={() => setModalIsOpen(true)}
+            >
+              <Menu size={25} />
+            </button>
+          </li>
+        </ul>
       </div>
-    </div>
+      <NavModal
+        isOpen={modalIsOpen}
+        onClose={() => setModalIsOpen(false)}
+      />
+    </>
   );
 }
 
