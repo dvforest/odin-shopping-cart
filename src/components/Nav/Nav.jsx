@@ -5,33 +5,38 @@ import { NavLink } from 'react-router';
 import ImmersalLogo from '../ImmersalLogo/ImmersalLogo';
 import { useState } from 'react';
 import NavModal from '../NavModal/NavModal';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 function Nav() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 768px)');
   return (
     <>
       <div className={styles.navBar}>
-        <ImmersalLogo textVisible />
-
+        <ImmersalLogo textVisible={isMobile ? false : true} />
         <ul className={styles.linkSection}>
-          <li>
-            <NavLink
-              to="/"
-              end
-              className={styles.navText}
-            >
-              Home
-            </NavLink>
-          </li>
+          {!isMobile && (
+            <>
+              <li>
+                <NavLink
+                  to="/"
+                  end
+                  className={styles.navText}
+                >
+                  Home
+                </NavLink>
+              </li>
 
-          <li>
-            <NavLink
-              to="/shop"
-              className={styles.navText}
-            >
-              Shop
-            </NavLink>
-          </li>
+              <li>
+                <NavLink
+                  to="/shop"
+                  className={styles.navText}
+                >
+                  Shop
+                </NavLink>
+              </li>
+            </>
+          )}
 
           <li>
             <div className={styles.cartContainer}>
@@ -42,14 +47,16 @@ function Nav() {
             </div>
           </li>
 
-          <li>
-            <button
-              className={styles.menuIcon}
-              onClick={() => setModalIsOpen(true)}
-            >
-              <Menu size={25} />
-            </button>
-          </li>
+          {isMobile && (
+            <li>
+              <button
+                className={styles.menuIcon}
+                onClick={() => setModalIsOpen(true)}
+              >
+                <Menu size={25} />
+              </button>
+            </li>
+          )}
         </ul>
       </div>
       <NavModal

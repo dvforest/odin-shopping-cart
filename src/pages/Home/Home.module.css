@@ -11,8 +11,9 @@
 }
 
 .booksImg {
-  width: 500px;
+  width: clamp(400px, 35vw, 500px);
   align-self: center;
+  transform: translate(calc(10vw - 150px));
 }
 
 .textSection {
@@ -34,7 +35,7 @@ h2 {
 }
 
 p {
-  margin: 40px;
+  margin: clamp(10px, 1vw + 10px, 40px);
   color: var(--white);
   text-align: center;
 }
@@ -45,10 +46,11 @@ p {
   cursor: pointer;
   font-family: 'Geologica', sans-serif;
   text-shadow: none;
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 1.2vw + 1.15rem, 2rem);
   font-weight: 600;
   border-radius: 30px;
-  padding: 20px 80px;
-  width: fit-content;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
   box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.1);
 }
