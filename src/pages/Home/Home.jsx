@@ -16,9 +16,9 @@ function Home() {
         <h2>OCEANS OF BOOKS.</h2>
         <h1>ENDLESS WONDER.</h1>
         <p>
-          You <i>know</i> what genres you enjoy. So why does finding your next
-          book feels like a daunting quest? <br />
-          At Immersal, we believe in re-kindling that spark.
+          You know what kind of books you like. So why does finding your next
+          read feels like a daunting quest? <br />
+          At Immersal, we're here to re-kindle the spark.
         </p>
         <NavLink
           to="/shop"

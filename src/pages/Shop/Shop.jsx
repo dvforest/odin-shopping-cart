@@ -1,5 +1,7 @@
+import styles from './Shop.module.css'
+
 function Shop() {
-  return <div>This is the Shop page!</div>;
+  return <div className={styles.shopContainer}>This is the Shop page!</div>;
 }
 
 export default Shop;

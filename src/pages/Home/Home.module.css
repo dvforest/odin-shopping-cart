@@ -1,13 +1,11 @@
 .homeContainer {
   width: 100vw;
-  height: calc(100vh - 75px);
+  min-height: calc(100vh - 75px);
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: right;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 40px;
+  justify-content: center;
+  padding: 40px 10% 40px 10%;
   position: relative;
   z-index: 5;
 }
@@ -17,7 +15,7 @@
 }
 
 .textSection {
-  width: 650px;
+  width: min(fit-content, 650px);
   display: flex;
   align-items: center;
   flex-direction: column;
