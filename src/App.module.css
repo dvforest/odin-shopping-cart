@@ -10,6 +10,11 @@
   height: 100%;
   background-size: 1100px auto;
   background-repeat: no-repeat;
-  /*transform: translate(calc(25vw - 400px));*/
-  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .backgroundImg {
+    background-size: 600px auto;
+    transform: translate(0px);
+  }
 }
