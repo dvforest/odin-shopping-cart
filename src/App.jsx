@@ -1,6 +1,5 @@
 import Nav from './components/Nav/Nav';
 import { Outlet } from 'react-router';
-import { AdvancedImage } from '@cloudinary/react';
 import styles from './App.module.css';
 import cld from './utils/cloudinary';
 
@@ -12,9 +11,9 @@ function App() {
       <Nav />
       <div className={styles.main}>
         <Outlet />
-        <AdvancedImage
-          cldImg={bg}
+        <div
           className={styles.backgroundImg}
+          style={{ backgroundImage: `url(${bg.toURL()})` }}
         />
       </div>
     </div>
