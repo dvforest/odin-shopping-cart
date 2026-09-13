@@ -5,7 +5,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 40px 5% 40px 5%;
+  padding: 40px 10% 40px 10%;
   position: relative;
   z-index: 5;
+}
+
+@media (max-width: 1024px) {
+  .shopContainer {
+    flex-direction: column;
+  }
 }

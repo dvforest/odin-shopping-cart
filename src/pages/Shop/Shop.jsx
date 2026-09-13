@@ -5,7 +5,7 @@ import { useState } from 'react';
 import BookSlide from '../../components/BookSlide/BookSlide';
 
 function Shop() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(3);
   const [count, setCount] = useState(1);
   return (
     <div className={styles.shopContainer}>

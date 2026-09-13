@@ -22,7 +22,7 @@ export const books = [
     genre: 'Romantasy',
     binding: 'Hardcover',
     price: 19.95,
-    description: 'Love and steamy sex — with elves and vampires.',
+    description: 'Love and steamy action — with elves and vampires.',
     img: cld.image('book2'),
   },
   {

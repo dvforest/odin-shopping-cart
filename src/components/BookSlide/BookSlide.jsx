@@ -5,6 +5,9 @@ import { AdvancedImage } from '@cloudinary/react';
 import { books } from '../../data/books';
 
 function BookSlide({ index, onPrev, onNext }) {
+  const ITEM_WIDTH = 60;
+  const offset = -index * ITEM_WIDTH + 220;
+
   return (
     <div className={styles.mainContainer}>
       <button
@@ -17,23 +20,28 @@ function BookSlide({ index, onPrev, onNext }) {
         />
       </button>
 
-      <div className={styles.slide}>
-        {books.map((book, i) => {
-          return (
-            <div
-              key="book.id"
-              className={`${styles.bookContainer} ${i === index ? styles.focused : ''}`}
-            >
-              <AdvancedImage
-                cldImg={book.img}
-                className={`${styles.book} ${i === index ? styles.focused : ''}`}
-              />
+      <div className={styles.carousel}>
+        <div
+          className={styles.slide}
+          style={{ transform: `translate3d(${offset}px, 0px, 0px)` }}
+        >
+          {books.map((book, i) => {
+            return (
               <div
-                className={`${styles.shadow} ${i === index ? styles.focused : ''}`}
-              />
-            </div>
-          );
-        })}
+                key={book.id}
+                className={`${styles.bookContainer} ${i === index ? styles.focused : ''}`}
+              >
+                <AdvancedImage
+                  cldImg={book.img}
+                  className={`${styles.book} ${i === index ? styles.focused : ''}`}
+                />
+                <div
+                  className={`${styles.shadow} ${i === index ? styles.focused : ''}`}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <button
