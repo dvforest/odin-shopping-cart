@@ -1,26 +1,25 @@
 import styles from './Shop.module.css';
 import BookInfo from '../../components/BookInfo/BookInfo';
 import { books } from '../../data/books';
-import { useState } from 'react';
 import BookSlide from '../../components/BookSlide/BookSlide';
+import { useOutletContext } from 'react-router';
 
 function Shop() {
-  const [index, setIndex] = useState(3);
-  const [count, setCount] = useState(1);
+  const { index, count, handlePrev, handleNext, handlePlus, handleMinus } =
+    useOutletContext();
+
   return (
     <div className={styles.shopContainer}>
       <BookSlide
         index={index}
-        onPrev={() => setIndex((prev) => (prev - 1 > 0 ? prev - 1 : 0))}
-        onNext={() =>
-          setIndex((prev) => (prev + 1 < books.length ? prev + 1 : prev))
-        }
+        onPrev={handlePrev}
+        onNext={handleNext}
       />
       <BookInfo
         book={books[index]}
         count={count}
-        onPlus={() => setCount((prev) => prev + 1)}
-        onMinus={() => setCount((prev) => (prev - 1 > 0 ? prev - 1 : 1))}
+        onPlus={handlePlus}
+        onMinus={handleMinus}
       />
     </div>
   );
