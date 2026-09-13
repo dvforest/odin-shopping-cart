@@ -16,9 +16,9 @@ function Home() {
         <h2>OCEANS OF BOOKS.</h2>
         <h1>ENDLESS WONDER.</h1>
         <p>
-          You know what kind of books you like. So why does finding your next
-          read feels like a daunting quest? <br />
-          At Immersal, we're here to re-kindle the spark.
+          Not sure what fantasy book to read next? At Immersal, we're here to
+          help you re-kindle the simple joy of book shopping — by embracing
+          surprises.
         </p>
         <NavLink
           to="/shop"

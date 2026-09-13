@@ -12,6 +12,16 @@
 
 .booksImg {
   width: clamp(400px, 35vw, 600px);
+  animation: floatUpDown 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
 }
 
 .textSection {
@@ -56,10 +66,10 @@ p {
 @media (max-width: 768px) {
   .homeContainer {
     flex-direction: column;
-    gap: 30px;
+    gap: 70px;
   }
 
   .booksImg {
-    width: 300px;
+    width: 350px;
   }
 }
