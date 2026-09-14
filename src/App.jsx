@@ -19,7 +19,7 @@ function App() {
   }
 
   function handleNext() {
-    setIndex((prev) => (prev - 1 < books.length ? prev + 1 : 0));
+    setIndex((prev) => (prev + 1 < books.length ? prev + 1 : prev));
   }
 
   function handlePlus() {
