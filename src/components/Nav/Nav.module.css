@@ -1,5 +1,5 @@
 .navBar {
-  padding: 0px 60px;
+  padding: 0px 80px;
   height: 75px;
   display: flex;
   justify-content: space-between;
@@ -19,10 +19,32 @@
   color: var(--navy);
 }
 
+.menuIcon {
+  stroke: var(--navy);
+}
+
+.cartContainer {
+  position: relative;
+}
+
 .cartIcon {
   stroke: var(--navy);
 }
 
-.menuIcon {
-  stroke: var(--navy);
+.cartTotal {
+  position: absolute;
+  right: -4px;
+  bottom: 2px;
+  transform: translateX(100%);
+  background-color: var(--peach);
+  color: var(--white);
+  width: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-family: 'Geologica', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

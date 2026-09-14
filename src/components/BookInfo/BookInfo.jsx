@@ -1,7 +1,7 @@
 import styles from './BookInfo.module.css';
 import Counter from '../Counter/Counter.jsx';
 
-function BookInfo({ book, count, onPlus, onMinus }) {
+function BookInfo({ book, count, onPlus, onMinus, onAddCart }) {
   return (
     <div className={styles.mainContainer}>
       <h2 className={styles.genre}>{book.genre}</h2>
@@ -13,7 +13,12 @@ function BookInfo({ book, count, onPlus, onMinus }) {
         onPlus={onPlus}
         onMinus={onMinus}
       />
-      <button className={styles.addButton}>Add to Cart</button>
+      <button
+        className={styles.addButton}
+        onClick={() => onAddCart(book.id, count)}
+      >
+        Add to Cart
+      </button>
     </div>
   );
 }

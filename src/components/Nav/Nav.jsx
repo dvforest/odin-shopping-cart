@@ -7,7 +7,7 @@ import { useState } from 'react';
 import NavModal from '../NavModal/NavModal';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 
-function Nav() {
+function Nav({ cartTotal }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width: 768px)');
   return (
@@ -44,6 +44,9 @@ function Nav() {
                 className={styles.cartIcon}
                 size={25}
               />
+              {cartTotal > 0 && (
+                <div className={styles.cartTotal}>{cartTotal}</div>
+              )}
             </div>
           </li>
 

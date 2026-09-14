@@ -5,8 +5,15 @@ import BookSlide from '../../components/BookSlide/BookSlide';
 import { useOutletContext } from 'react-router';
 
 function Shop() {
-  const { index, count, handlePrev, handleNext, handlePlus, handleMinus } =
-    useOutletContext();
+  const {
+    index,
+    count,
+    handlePrev,
+    handleNext,
+    handlePlus,
+    handleMinus,
+    handleAddCart,
+  } = useOutletContext();
 
   return (
     <div className={styles.shopContainer}>
@@ -20,6 +27,7 @@ function Shop() {
         count={count}
         onPlus={handlePlus}
         onMinus={handleMinus}
+        onAddCart={handleAddCart}
       />
     </div>
   );
