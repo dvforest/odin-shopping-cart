@@ -69,6 +69,58 @@
   font-family: 'Geologica', sans-serif;
 }
 
+.itemContainer {
+  border-radius: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin: 16px;
+}
+
+.bookIcon {
+  width: 50px;
+}
+
+.iconSection {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.subText {
+  font-weight: 600;
+  color: var(--grey);
+  font-family: 'Geologica', sans-serif;
+  font-size: 0.8rem;
+}
+
+.keyText {
+  font-weight: 400;
+  font-size: 1.5;
+  font-family: 'Days One', sans-serif;
+  color: var(--navy);
+}
+
+.price {
+  font-weight: 400;
+  font-size: 0.8;
+  font-family: 'Days One', sans-serif;
+  color: var(--teal);
+}
+
+.countSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 @media (max-width: 768px) {
   .modal {
     width: 450px;
