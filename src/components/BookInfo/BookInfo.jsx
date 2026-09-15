@@ -8,11 +8,13 @@ function BookInfo({ book, count, onPlus, onMinus, onAddCart }) {
       <div className={styles.binding}>{book.binding}</div>
       <p className={styles.description}>{book.description}</p>
       <div className={styles.price}>{'$' + book.price}</div>
-      <Counter
-        count={count}
-        onPlus={onPlus}
-        onMinus={onMinus}
-      />
+      <div className={styles.counter}>
+        <Counter
+          count={count}
+          onPlus={onPlus}
+          onMinus={onMinus}
+        />
+      </div>
       <button
         className={styles.addButton}
         onClick={() => onAddCart(book.id, count)}

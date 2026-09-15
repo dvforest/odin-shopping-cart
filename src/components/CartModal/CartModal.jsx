@@ -21,7 +21,7 @@ function CartModal({ isOpen, onClose, inCart }) {
           size={30}
           strokeWidth={2}
         />
-        {Object.entries(inCart).map(([id, item]) => {
+        {Object.entries(inCart).map(([id, count]) => {
           const i = books.findIndex((book) => book.id === id);
           return (
             <div
@@ -34,12 +34,14 @@ function CartModal({ isOpen, onClose, inCart }) {
                   className={styles.bookIcon}
                 />
                 <div className={styles.titleContainer}>
-                  <div className={styles.keyText}>{books[i].genre}</div>
+                  <div className={styles.keyText}>{books[i].genre} Novel</div>
                   <div className={styles.subText}>{books[i].binding}</div>
                 </div>
               </div>
               <div className={styles.countSection}>
-                <Counter />
+                <div className={styles.counterWrapper}>
+                  <Counter count={count} />
+                </div>
                 <div className={styles.row}>
                   <div className={styles.price}>$ {books[i].price}</div>
                   <button className={styles.trashIcon}>

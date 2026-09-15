@@ -71,21 +71,23 @@
 
 .itemContainer {
   border-radius: 20px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  margin: 16px;
+  margin: 20px 0px;
 }
 
 .bookIcon {
   width: 50px;
+  height: 30px;
 }
 
 .iconSection {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 12px;
 }
 
@@ -98,14 +100,14 @@
 
 .keyText {
   font-weight: 400;
-  font-size: 1.5;
+  font-size: 1rem;
   font-family: 'Days One', sans-serif;
   color: var(--navy);
 }
 
 .price {
-  font-weight: 400;
-  font-size: 0.8;
+  font-weight: 100;
+  font-size: 1rem;
   font-family: 'Days One', sans-serif;
   color: var(--teal);
 }
@@ -113,12 +115,26 @@
 .countSection {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+}
+
+.counterWrapper {
+  scale: 0.7;
+  transform-origin: right center;
 }
 
 .row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 7px;
+  align-items: center;
+}
+
+.trashIcon {
+  scale: 0.8;
+  transform-origin: right center;
+  margin-right: 2px;
 }
 
 @media (max-width: 768px) {
