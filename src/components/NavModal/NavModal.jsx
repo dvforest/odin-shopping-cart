@@ -14,7 +14,6 @@ function NavModal({ isOpen, onClose }) {
         </button>
 
         <li>
-          {' '}
           <button onClick={onClose}>
             <NavLink
               to="/"

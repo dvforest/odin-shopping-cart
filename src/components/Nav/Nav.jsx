@@ -6,10 +6,16 @@ import ImmersalLogo from '../ImmersalLogo/ImmersalLogo';
 import { useState } from 'react';
 import NavModal from '../NavModal/NavModal';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
+import CartModal from '../CartModal/CartModal';
 
-function Nav({ cartTotal }) {
+function Nav({ inCart }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
+
   const isMobile = useMediaQuery('(max-width: 768px)');
+
+  const cartTotal = Object.values(inCart).reduce((sum, val) => sum + val, 0);
+
   return (
     <>
       <div className={styles.navBar}>
@@ -39,7 +45,10 @@ function Nav({ cartTotal }) {
           )}
 
           <li>
-            <div className={styles.cartContainer}>
+            <button
+              className={styles.cartContainer}
+              onClick={() => setCartIsOpen(true)}
+            >
               <ShoppingCart
                 className={styles.cartIcon}
                 size={25}
@@ -47,7 +56,7 @@ function Nav({ cartTotal }) {
               {cartTotal > 0 && (
                 <div className={styles.cartTotal}>{cartTotal}</div>
               )}
-            </div>
+            </button>
           </li>
 
           {isMobile && (
@@ -65,6 +74,10 @@ function Nav({ cartTotal }) {
       <NavModal
         isOpen={modalIsOpen}
         onClose={() => setModalIsOpen(false)}
+      />
+      <CartModal
+        isOpen={cartIsOpen}
+        onClose={() => setCartIsOpen(false)}
       />
     </>
   );

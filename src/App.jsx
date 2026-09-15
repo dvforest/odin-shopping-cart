@@ -11,9 +11,7 @@ function App() {
   const [inCart, setInCart] = useState({});
 
   const bg = cld.image('bg');
-
-  const cartTotal = Object.values(inCart).reduce((sum, val) => sum + val, 0);
-
+  
   function handlePrev() {
     setIndex((prev) => (prev - 1 > 0 ? prev - 1 : 0));
   }
@@ -40,7 +38,7 @@ function App() {
 
   return (
     <div>
-      <Nav cartTotal={cartTotal} />
+      <Nav inCart={inCart} />
       <div className={styles.main}>
         <Outlet
           context={{
