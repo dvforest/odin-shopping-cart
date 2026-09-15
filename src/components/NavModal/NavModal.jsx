@@ -38,7 +38,7 @@ function NavModal({ isOpen, onClose }) {
         <X
           className={`${styles.x} ${isOpen ? styles.xVisible : ''}`}
           onClick={onClose}
-          size={45}
+          size={30}
           strokeWidth={2}
         />
       </ul>

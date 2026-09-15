@@ -18,7 +18,9 @@ function Nav({ inCart }) {
 
   return (
     <>
-      <div className={styles.navBar}>
+      <div
+        className={`${styles.navBar} ${cartTotal > 0 ? styles.hasItems : ''}`}
+      >
         <ImmersalLogo textVisible={isMobile ? false : true} />
         <ul className={styles.linkSection}>
           {!isMobile && (
@@ -53,9 +55,11 @@ function Nav({ inCart }) {
                 className={styles.cartIcon}
                 size={25}
               />
-              {cartTotal > 0 && (
-                <div className={styles.cartTotal}>{cartTotal}</div>
-              )}
+              <div
+                className={`${styles.cartTotal} ${cartTotal > 0 ? styles.hasItems : ''}`}
+              >
+                {cartTotal}
+              </div>
             </button>
           </li>
 
@@ -78,6 +82,7 @@ function Nav({ inCart }) {
       <CartModal
         isOpen={cartIsOpen}
         onClose={() => setCartIsOpen(false)}
+        inCart={inCart}
       />
     </>
   );

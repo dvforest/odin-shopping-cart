@@ -1,10 +1,15 @@
 .navBar {
-  padding: 0px 80px;
+  padding: 0px 80px 0px 80px;
   height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  transition: padding 0.3s ease;
+}
+
+.navBar.hasItems {
+  padding: 0px 100px 0px 80px;
 }
 
 .linkSection {
@@ -33,7 +38,7 @@
 
 .cartTotal {
   position: absolute;
-  right: -4px;
+  right: -30px;
   bottom: 2px;
   transform: translateX(100%);
   background-color: var(--peach);
@@ -47,4 +52,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.cartTotal.hasItems {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .navBar.hasItems {
+    padding: 0px 40px 0px 20px;
+  }
 }
