@@ -11,7 +11,7 @@ function App() {
   const [inCart, setInCart] = useState({});
 
   const bg = cld.image('bg');
-  
+
   function handlePrev() {
     setIndex((prev) => (prev - 1 > 0 ? prev - 1 : 0));
   }
@@ -29,16 +29,33 @@ function App() {
   }
 
   function handleAddCart(id, count) {
-    console.log(`added ${id} x ${count}`);
     setInCart((prev) => ({
       ...prev,
-      [id]: (prev[id] || 0) + count,
+      [id]: Math.min(99, (prev[id] || 0) + count),
     }));
+  }
+
+  function handleRemoveCart(id, count) {
+    const currentCount = inCart[id];
+    const newCount = currentCount - count;
+
+    if (newCount <= 0) {
+      setInCart((prev) => {
+        const { [id]: _, ...idRemoved } = prev;
+        return idRemoved;
+      });
+    } else {
+      handleAddCart(id, -count);
+    }
   }
 
   return (
     <div>
-      <Nav inCart={inCart} />
+      <Nav
+        inCart={inCart}
+        onAddCart={handleAddCart}
+        onRemoveCart={handleRemoveCart}
+      />
       <div className={styles.main}>
         <Outlet
           context={{

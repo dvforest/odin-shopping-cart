@@ -8,7 +8,7 @@ import NavModal from '../NavModal/NavModal';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 import CartModal from '../CartModal/CartModal';
 
-function Nav({ inCart }) {
+function Nav({ inCart, onAddCart, onRemoveCart }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [cartIsOpen, setCartIsOpen] = useState(false);
 
@@ -83,6 +83,8 @@ function Nav({ inCart }) {
         isOpen={cartIsOpen}
         onClose={() => setCartIsOpen(false)}
         inCart={inCart}
+        onAddCart={onAddCart}
+        onRemoveCart={onRemoveCart}
       />
     </>
   );

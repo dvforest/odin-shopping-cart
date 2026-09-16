@@ -6,7 +6,7 @@ import { AdvancedImage } from '@cloudinary/react';
 import Counter from '../Counter/Counter.jsx';
 import { books } from '../../data/books.js';
 
-function CartModal({ isOpen, onClose, inCart }) {
+function CartModal({ isOpen, onClose, inCart, onAddCart, onRemoveCart }) {
   const cartTotal = Object.values(inCart).reduce((sum, val) => sum + val, 0);
   return (
     <div className={styles.modalContainer}>
@@ -40,11 +40,18 @@ function CartModal({ isOpen, onClose, inCart }) {
               </div>
               <div className={styles.countSection}>
                 <div className={styles.counterWrapper}>
-                  <Counter count={count} />
+                  <Counter
+                    count={count}
+                    onPlus={() => onAddCart(id, 1)}
+                    onMinus={() => onRemoveCart(id, 1)}
+                  />
                 </div>
                 <div className={styles.row}>
                   <div className={styles.price}>$ {books[i].price}</div>
-                  <button className={styles.trashIcon}>
+                  <button
+                    className={styles.trashIcon}
+                    onClick={() => onRemoveCart(id, 99)}
+                  >
                     <Trash />
                   </button>
                 </div>
