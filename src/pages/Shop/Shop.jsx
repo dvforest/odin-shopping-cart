@@ -19,10 +19,10 @@ function Shop() {
     <div className={styles.shopContainer}>
       <div className={styles.header}>
         <h2>
-          <span className={styles.white}>Only the best of </span>fantasy books.
+          <span className={styles.white}>Only the best </span>fantasy novels.
         </h2>
         <p className={styles.subHeader}>
-          Pick a genre. We'll find the right gem for you.
+          Pick a genre. We'll find the right gem just for you.
         </p>
       </div>
       <div className={styles.mainContent}>
