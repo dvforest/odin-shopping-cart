@@ -49,6 +49,11 @@
   font-size: 1.2rem;
   font-weight: 400;
   font-family: 'Days One', sans-serif;
+  transition: filter 0.3s ease;
+}
+
+.addButton:hover {
+  filter: brightness(1.1);
 }
 
 .counter {

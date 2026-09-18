@@ -52,6 +52,11 @@
   right: 40px;
   opacity: 0;
   color: var(--black);
+  transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.x:hover {
+  transform: scale(1.15);
 }
 
 .xVisible {
@@ -64,4 +69,8 @@
   font-size: 1.3rem;
   font-weight: 500;
   color: var(--navy);
+}
+
+.navText:hover {
+  filter: brigthness(1.1);
 }

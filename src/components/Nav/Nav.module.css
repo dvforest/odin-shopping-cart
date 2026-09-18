@@ -24,12 +24,20 @@
   color: var(--navy);
 }
 
+.navText:hover {
+  filter: brightness(1.1);
+}
+
 .menuIcon {
   stroke: var(--navy);
 }
 
 .cartContainer {
   position: relative;
+}
+
+.cartIcon:hover {
+  filter: brightness(1.1);
 }
 
 .cartIcon {

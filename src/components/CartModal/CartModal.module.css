@@ -51,6 +51,11 @@
   right: 40px;
   opacity: 0;
   color: var(--black);
+  transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.x:hover {
+  transform: scale(1.15);
 }
 
 .xVisible {
@@ -171,11 +176,16 @@
   padding: 10px 0px;
   text-align: center;
   border-radius: 100px;
-  color: white;
+  color: var(--white);
   width: 100%;
   font-size: 1.2rem;
   font-weight: 400;
   font-family: 'Days One', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.checkout:hover {
+  background-color: rgb(61, 67, 83);
 }
 
 .trashIcon {
