@@ -22,7 +22,7 @@ function Shop() {
           <span className={styles.white}>Only the best </span>fantasy novels.
         </h2>
         <p className={styles.subHeader}>
-          Pick a genre. We'll find the right gem just for you.
+          Pick a genre. We'll hunt the perfect gem for you.
         </p>
       </div>
       <div className={styles.mainContent}>

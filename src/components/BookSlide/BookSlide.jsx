@@ -5,8 +5,8 @@ import { AdvancedImage } from '@cloudinary/react';
 import { books } from '../../data/books';
 
 function BookSlide({ index, onPrev, onNext }) {
-  const ITEM_WIDTH = 60;
-  const offset = -index * ITEM_WIDTH + 220;
+  const ITEM_WIDTH = 65;
+  const offset = -index * ITEM_WIDTH + 230;
 
   return (
     <div className={styles.mainContainer}>
