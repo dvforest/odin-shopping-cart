@@ -11,3 +11,9 @@
   background-size: 1200px auto;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 768px) {
+  .backgroundImg {
+    background-size: 700px auto;
+  }
+}
