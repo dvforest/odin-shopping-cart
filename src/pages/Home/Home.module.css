@@ -1,5 +1,5 @@
 .homeContainer {
-  width: 100vw;
+  width: 100%;
   min-height: calc(100vh - 75px);
   display: flex;
   flex-direction: row;
@@ -7,6 +7,7 @@
   justify-content: center;
   padding: 40px 10% 40px 10%;
   position: relative;
+  gap: 20px;
   z-index: 5;
 }
 
@@ -25,7 +26,7 @@
 }
 
 .textSection {
-  width: min(fit-content, 650px);
+  width: min(fit-content, 700px);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -35,11 +36,13 @@
 h1 {
   color: var(--white);
   text-align: center;
+  white-space: nowrap;
 }
 
 h2 {
   color: var(--vanilla);
   text-align: center;
+  white-space: nowrap;
 }
 
 p {
@@ -67,10 +70,10 @@ p {
 @media (max-width: 768px) {
   .homeContainer {
     flex-direction: column;
-    gap: 70px;
+    gap: 20px;
   }
 
   .booksImg {
-    width: 400px;
+    width: 450px;
   }
 }
