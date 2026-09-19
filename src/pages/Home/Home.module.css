@@ -46,6 +46,7 @@ p {
   margin: clamp(10px, 1vw + 10px, 40px);
   color: var(--white);
   text-align: center;
+  max-width: 600px;
 }
 
 .ShopNowButton {
@@ -70,6 +71,6 @@ p {
   }
 
   .booksImg {
-    width: 350px;
+    width: 400px;
   }
 }

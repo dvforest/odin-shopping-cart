@@ -130,19 +130,19 @@
 .total {
   font-weight: 400;
   font-family: 'Days One', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .price {
   font-weight: 100;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-family: 'Days One', sans-serif;
   color: var(--teal);
 }
 
 .priceBold {
   font-weight: 100;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: 'Days One', sans-serif;
   color: var(--black);
 }
