@@ -145,7 +145,7 @@
   font-weight: 100;
   font-size: 0.8rem;
   font-family: 'Days One', sans-serif;
-  color: var(--grey);
+  color: var(--black);
 }
 
 .countSection {
@@ -171,7 +171,7 @@
   width: 100%;
 }
 
-.checkout {
+.blackBtn {
   background-color: var(--black);
   margin-top: 20px;
   padding: 10px 0px;
@@ -194,6 +194,11 @@
   color: var(--grey);
   transform-origin: right center;
   margin-right: 2px;
+}
+
+p.oops {
+  color: var(--black);
+  font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
