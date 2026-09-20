@@ -14,7 +14,7 @@
   transition: transform 0.3s ease;
   background-color: var(--white);
   height: 100vh;
-  width: calc(100% - 120px);
+  width: 500px;
   padding: 20px 60px 30px 30px;
   display: flex;
   flex-direction: column;
@@ -73,4 +73,10 @@
 
 .navText:hover {
   filter: brigthness(1.1);
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 100%;
+  }
 }
