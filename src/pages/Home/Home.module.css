@@ -67,13 +67,11 @@ p {
   box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .homeContainer {
     flex-direction: column;
     gap: 20px;
-  }
-
-  .booksImg {
-    width: 450px;
+    justify-content: start;
+    padding-top: 80px;
   }
 }

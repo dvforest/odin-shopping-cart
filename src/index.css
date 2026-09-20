@@ -36,6 +36,11 @@ a {
   text-decoration: none;
 }
 
+body {
+  container-type: inline-size;
+  overflow-x: hidden;
+}
+
 h1 {
   font-size: clamp(1.8rem, 2.3vw + 1.3rem, 3.2rem);
   font-weight: 400;

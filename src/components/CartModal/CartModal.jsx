@@ -93,7 +93,9 @@ function CartModal({ isOpen, onClose, inCart, onAddCart, onRemoveCart }) {
           <div className={`${styles.row} ${styles.fullWidth}`}>
             <div className={styles.subText}>Shipping</div>
             <div className={styles.priceBold}>
-              {shipping !== 0 ? `$${shipping.toFixed(2)}` : 'Free'}
+              {shipping !== 0
+                ? `$${shipping.toFixed(2)}`
+                : 'Free Shipping (over $50)'}
             </div>
           </div>
 
