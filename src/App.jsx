@@ -18,7 +18,8 @@ function App() {
     const bg = cld.image('bg');
     const home = cld.image('home-books');
     const logo = cld.image('logo-immersal');
-    images.push(bg, home, logo);
+    const cartBook = cld.image('book-icon');
+    images.push(bg, home, logo, cartBook);
     preloadImages(images).then(() => {
       setIsLoading(false);
     });
