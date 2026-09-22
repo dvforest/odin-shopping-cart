@@ -182,11 +182,21 @@
   font-size: 1.2rem;
   font-weight: 400;
   font-family: 'Days One', sans-serif;
-  transition: background-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.checkout:hover {
+.blackBtn:hover {
   background-color: rgb(61, 67, 83);
+  transform: scale(1.005);
+}
+
+.blackBtn:active {
+  transform: scale(0.99);
 }
 
 .trashIcon {
@@ -194,6 +204,14 @@
   color: var(--grey);
   transform-origin: right center;
   margin-right: 2px;
+}
+
+.trashIcon:hover {
+  color: var(--peach);
+}
+
+.trashIcon:active {
+  scale: 0.75;
 }
 
 p.oops {

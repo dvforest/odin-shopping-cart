@@ -18,14 +18,23 @@
 }
 
 .navText {
+  display: inline-block;
   font-family: 'Geologica', sans-serif;
   font-size: 1.3rem;
   font-weight: 500;
   color: var(--navy);
+  transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .navText:hover {
   filter: brightness(1.1);
+}
+
+.navText:active {
+  transform: scale(0.95);
 }
 
 .menuIcon {
@@ -34,10 +43,16 @@
 
 .cartContainer {
   position: relative;
+  transition: transform 0.1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .cartIcon:hover {
   filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.cartIcon:active {
+  transform: scale(0.98);
 }
 
 .cartIcon {
@@ -65,11 +80,22 @@
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
+  will-change: transform;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .cartTotal.hasItems {
   opacity: 1;
   transform: scale(1);
+}
+
+.cartTotal:hover {
+  transform: scale(1.05);
+}
+
+.cartTotal:active {
+  transform: scale(0.98);
 }
 
 @media (max-width: 768px) {
