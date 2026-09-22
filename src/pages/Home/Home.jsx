@@ -10,6 +10,7 @@ function Home() {
     <div className={styles.homeContainer}>
       <AdvancedImage
         cldImg={books}
+        crossOrigin="anonymous"
         className={styles.booksImg}
       />
       <div className={styles.textSection}>
