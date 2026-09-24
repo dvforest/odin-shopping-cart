@@ -114,3 +114,10 @@
     transform: scale(0.9) rotateX(90deg);
   }
 }
+
+@media (max-width: 768px) {
+  .carousel {
+    transform: scale(0.6);
+    margin: -80px -0px;
+  }
+}

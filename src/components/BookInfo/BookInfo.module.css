@@ -33,6 +33,7 @@
 
 .price {
   font-weight: 400;
+  text-align: center;
   color: var(--teal);
   font-size: 1.2rem;
   font-family: 'Days One', sans-serif;
@@ -68,4 +69,36 @@
 
 .counter {
   margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 20px;
+  }
+  .genre {
+    height: 1.75rem;
+    font-size: 1.2rem;
+  }
+  .binding {
+    height: 1rem;
+    font-size: 0.9rem;
+  }
+  .price {
+    height: 1.5rem;
+    margin-left: 40px;
+    font-size: 1.1rem;
+  }
+  .counter {
+    transform: scale(0.7);
+  }
+  .priceAndCounterContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: -15px;
+  }
+  .addButton {
+    font-size: 1.2rem;
+    padding: 5px;
+  }
 }
