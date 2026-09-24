@@ -1,6 +1,6 @@
 .homeContainer {
   width: 100%;
-  min-height: calc(100vh - 75px);
+  height: calc(100vh - 75px);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -12,7 +12,7 @@
 }
 
 .booksImg {
-  width: clamp(320px, 35vw, 600px);
+  width: clamp(350px, 35vw, 600px);
   animation: floatUpDown 1s ease-in-out infinite alternate;
 }
 
@@ -85,6 +85,5 @@ p {
     flex-direction: column;
     gap: 40px;
     justify-content: center;
-    padding-top: 50px;
   }
 }
