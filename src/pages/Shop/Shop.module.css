@@ -36,6 +36,11 @@ h2 {
   .mainContent {
     flex-direction: column;
   }
+  .shopContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .header {
     display: flex;
     flex-direction: column;
