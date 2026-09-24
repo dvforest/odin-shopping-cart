@@ -84,18 +84,18 @@
     font-size: 0.9rem;
   }
   .price {
-    height: 1.5rem;
-    margin-left: 40px;
-    font-size: 1.1rem;
+    height: 1.8rem;
+    margin-left: 30px;
+    font-size: 1.3rem;
   }
   .counter {
-    transform: scale(0.7);
+    transform: scale(0.85);
   }
   .priceAndCounterContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: -15px;
+    margin: -10px;
   }
   .addButton {
     font-size: 1.2rem;
