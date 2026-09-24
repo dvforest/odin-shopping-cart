@@ -12,7 +12,7 @@
 }
 
 .booksImg {
-  width: clamp(250px, 35vw, 600px);
+  width: clamp(320px, 35vw, 600px);
   animation: floatUpDown 1s ease-in-out infinite alternate;
 }
 
@@ -83,8 +83,8 @@ p {
 @media (max-width: 1024px) {
   .homeContainer {
     flex-direction: column;
-    gap: 20px;
-    justify-content: start;
-    padding-top: 30px;
+    gap: 40px;
+    justify-content: center;
+    padding-top: 50px;
   }
 }
